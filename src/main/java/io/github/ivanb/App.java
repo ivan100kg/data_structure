@@ -1,11 +1,11 @@
 package io.github.ivanb;
 
-import io.github.ivanb.struct.Array;
-import io.github.ivanb.struct.List;
+import io.github.ivanb.struct.GraphList;
+import io.github.ivanb.struct.MyList;
 
 public class App {
     public static void main(String[] args) {
-        Struct struct = new List();
+        Struct struct = new GraphList();
         struct.show();
     }
 }

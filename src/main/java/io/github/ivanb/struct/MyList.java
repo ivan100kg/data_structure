@@ -2,21 +2,21 @@ package io.github.ivanb.struct;
 
 import io.github.ivanb.Struct;
 
-public class List<T> implements Struct {
+public class MyList<T> implements Struct {
     private Object[] arr;
     private T type;
 
-    private List(Object[] arr, T clazz) {
+    private MyList(Object[] arr, T clazz) {
         this.type = clazz;
         this.arr = arr;
     }
 
-    public List() {
+    public MyList() {
 
     }
 
-    public static <T> List<T> of(T tClass) {
-        return new List<>(new Object[]{}, tClass);
+    public static <T> MyList<T> of(T tClass) {
+        return new MyList<>(new Object[]{}, tClass);
     }
 
     private void add(T elem) {
@@ -57,24 +57,24 @@ public class List<T> implements Struct {
 
     @Override
     public void show() {
-        List list = List.of(Integer.class);
-        list.add(12);
-        list.add(13);
-        list.add(14);
-        list.add(0);
-        list.add(22);
-        list.add(-5);
-        System.out.println(list);
+        MyList myList = MyList.of(Integer.class);
+        myList.add(12);
+        myList.add(13);
+        myList.add(14);
+        myList.add(0);
+        myList.add(22);
+        myList.add(-5);
+        System.out.println(myList);
 
-        System.out.println(list.get(0));
+        System.out.println(myList.get(0));
 
-        List list2 = List.of(String.class);
-        list2.add(1);
-        list2.add("2");
-        list2.add("a");
-        System.out.println(list2.get(0).getClass());
-        System.out.println(list2.get(1).getClass());
-        System.out.println(list2);
+        MyList myList2 = MyList.of(String.class);
+        myList2.add(1);
+        myList2.add("2");
+        myList2.add("a");
+        System.out.println(myList2.get(0).getClass());
+        System.out.println(myList2.get(1).getClass());
+        System.out.println(myList2);
 
 
     }
